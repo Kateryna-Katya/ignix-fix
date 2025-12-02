@@ -18,7 +18,7 @@
 
   <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/ignix-fix/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/ignix-fix/assets/styles-BMMdVcwb.css">
+    <link rel="stylesheet" crossorigin href="/ignix-fix/assets/styles-DCmRiWli.css">
   </head>
   <body>
     <header class="header">
@@ -49,7 +49,252 @@
 
     <main class="main" id="main-content">
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="home">
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="hero__badge">
+                <span class="pulse-dot"></span>
+                Платформа уже доступна в Европе
+            </div>
+
+            <h1 class="hero__title reveal-text">
+                Цифровая архитектура <br>
+                <span class="text-gradient">вашего успеха</span>
+            </h1>
+
+            <p class="hero__desc reveal-text">
+                Воплотите мечты в реальность с инновационной платформой обучения.
+                Пошаговый путь в IT, экспертная поддержка и методологии, доказавшие эффективность.
+            </p>
+
+            <div class="hero__actions reveal-actions">
+                <a href="#contact" class="btn btn--primary">
+                    Начать сейчас <i data-lucide="arrow-right" style="margin-left: 8px; width: 18px;"></i>
+                </a>
+                <a href="#about" class="btn btn--outline">
+                    Оценить перспективы
+                </a>
+            </div>
+
+            <div class="hero__stats reveal-actions">
+                <div class="stat-item">
+                    <span class="stat-num">2 мин</span>
+                    <span class="stat-label">Легкий старт</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">24/7</span>
+                    <span class="stat-label">Поддержка</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+    </div>
+
+    <div class="hero__glow"></div>
+</section>
+<section class="section about" id="about">
+    <div class="container">
+        <div class="section-header reveal-text">
+            <h2 class="section-title">Почему выбирают <span class="text-accent">Ignix-Fix</span>?</h2>
+            <p class="section-subtitle">Мы объединили передовую цифровую инфраструктуру и экспертный опыт.</p>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-card bento-card--large reveal-card">
+                <div class="bento-icon"><i data-lucide="zap"></i></div>
+                <h3>Технология нового поколения</h3>
+                <p>Наши алгоритмы обучения адаптируются под ваш темп. Это решения, которые меняют правила игры в
+                    индустрии образования.</p>
+            </div>
+
+            <div class="bento-card reveal-card">
+                <div class="bento-icon"><i data-lucide="trending-up"></i></div>
+                <h3>Стратегия роста</h3>
+                <p>Практики, применимые уже сегодня для построения карьеры.</p>
+            </div>
+
+            <div class="bento-card reveal-card">
+                <div class="bento-icon"><i data-lucide="shield-check"></i></div>
+                <h3>Проверенный партнер</h3>
+                <p>Экспертная поддержка на всех этапах вашего развития.</p>
+            </div>
+
+            <div class="bento-card bento-card--medium reveal-card">
+                <div class="bento-icon"><i data-lucide="globe"></i></div>
+                <h3>Международный стандарт</h3>
+                <p>Платформа уже доступна в Европе. Мы используем методологии, доказавшие эффективность на глобальном
+                    рынке.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section courses" id="courses">
+    <div class="container">
+        <div class="section-header reveal-text">
+            <h2 class="section-title">Программы <span class="text-accent">обучения</span></h2>
+            <p class="section-subtitle">Пошаговый путь, понятный каждому. От новичка до профи.</p>
+        </div>
+
+        <div class="cards-grid">
+            <article class="course-card reveal-card">
+                <div class="course-card__image">
+                    <img src="img/placeholder.png" alt="Web Development">
+                    <span class="course-tag">Популярно</span>
+                </div>
+                <div class="course-card__content">
+                    <h3>Fullstack Разработчик</h3>
+                    <p>Освойте профессию с нуля. Удобная адаптация без сложностей.</p>
+                    <ul class="course-features">
+                        <li><i data-lucide="check"></i> 6 месяцев практики</li>
+                        <li><i data-lucide="check"></i> Личный ментор</li>
+                    </ul>
+                    <a href="#contact" class="btn-link">Запросить доступ <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="course-card reveal-card">
+                <div class="course-card__image">
+                    <img src="img/placeholder.png" alt="Data Science">
+                    <span class="course-tag course-tag--new">New</span>
+                </div>
+                <div class="course-card__content">
+                    <h3>Data Science & AI</h3>
+                    <p>AI-инструменты для реальных задач. Технологии, которые работают на вас.</p>
+                    <ul class="course-features">
+                        <li><i data-lucide="check"></i> Python & Neural Networks</li>
+                        <li><i data-lucide="check"></i> Работа с Big Data</li>
+                    </ul>
+                    <a href="#contact" class="btn-link">Узнать детали <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="course-card reveal-card">
+                <div class="course-card__image">
+                    <img src="img/placeholder.png" alt="DevOps">
+                </div>
+                <div class="course-card__content">
+                    <h3>DevOps Инженер</h3>
+                    <p>Инновационная технология управления серверами и облаками.</p>
+                    <ul class="course-features">
+                        <li><i data-lucide="check"></i> Docker & Kubernetes</li>
+                        <li><i data-lucide="check"></i> CI/CD процессы</li>
+                    </ul>
+                    <a href="#contact" class="btn-link">Начать сейчас <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section innovation" id="innovation">
+    <div class="container">
+        <div class="innovation-wrapper">
+            <div class="innovation-content reveal-text">
+                <h2 class="section-title">Инновации в <br>каждом байте</h2>
+                <p class="innovation-desc">
+                    Мы внедряем решения, которые меняют правила игры. Наша платформа использует AI для анализа вашего
+                    прогресса, предлагая персонализированную стратегию роста.
+                </p>
+
+                <ul class="innovation-list">
+                    <li>
+                        <div class="in-icon"><i data-lucide="cpu"></i></div>
+                        <div>
+                            <h4>AI-Ассистент</h4>
+                            <p>Умная помощь 24/7 при решении задач.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="in-icon"><i data-lucide="layers"></i></div>
+                        <div>
+                            <h4>Микросервисная архитектура</h4>
+                            <p>Быстрый и лёгкий старт в сложных темах.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="in-icon"><i data-lucide="lock"></i></div>
+                        <div>
+                            <h4>Безопасность данных</h4>
+                            <p>Передовая цифровая инфраструктура защиты.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="innovation-visual reveal-card">
+                <div class="tech-circle">
+                    <div class="tech-inner"></div>
+                </div>
+                <img src="img/placeholder.png" alt="Innovation" class="innovation-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section advantages" id="advantages">
+    <div class="container">
+        <div class="section-header reveal-text">
+            <h2 class="section-title">Расширьте горизонты</h2>
+            <p class="section-subtitle">Откройте новые возможности с нашей экосистемой.</p>
+        </div>
+
+        <div class="adv-grid">
+            <div class="adv-item reveal-card">
+                <i data-lucide="clock" class="adv-icon"></i>
+                <h4>Гибкий график</h4>
+                <p>Учитесь в удобном ритме. Программа подстраивается под вас.</p>
+            </div>
+            <div class="adv-item reveal-card">
+                <i data-lucide="award" class="adv-icon"></i>
+                <h4>Сертификация</h4>
+                <p>Документы международного образца для работы в ЕС.</p>
+            </div>
+            <div class="adv-item reveal-card">
+                <i data-lucide="users" class="adv-icon"></i>
+                <h4>Комьюнити</h4>
+                <p>Доступ к закрытому сообществу экспертов и выпускников.</p>
+            </div>
+            <div class="adv-item reveal-card">
+                <i data-lucide="briefcase" class="adv-icon"></i>
+                <h4>Карьера</h4>
+                <p>Постройте карьеру, которая работает на вас. Помощь с CV.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section blog" id="blog">
+    <div class="container">
+        <div class="blog-header">
+            <h2 class="section-title">База знаний</h2>
+            <a href="#contact" class="btn btn--outline">Все статьи</a>
+        </div>
+
+        <div class="blog-grid">
+            <a href="#" class="blog-card reveal-card">
+                <div class="blog-date">12 Окт 2024</div>
+                <h3>Топ-5 языков программирования для старта</h3>
+                <p>Легко разобраться без опыта. Обзор перспектив.</p>
+                <span class="read-more">Читать далее &rarr;</span>
+            </a>
+            <a href="#" class="blog-card reveal-card">
+                <div class="blog-date">08 Ноя 2024</div>
+                <h3>Как AI меняет рынок труда?</h3>
+                <p>Оценить перспективы проекта в эпоху нейросетей.</p>
+                <span class="read-more">Читать далее &rarr;</span>
+            </a>
+            <a href="#" class="blog-card reveal-card">
+                <div class="blog-date">01 Дек 2024</div>
+                <h3>Удаленная работа: мифы и реальность</h3>
+                <p>Воплотите мечты в реальность, работая из любой точки мира.</p>
+                <span class="read-more">Читать далее &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
@@ -110,6 +355,8 @@
   </div>
 </footer>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
     <script>
       lucide.createIcons();
     </script>
