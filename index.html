@@ -18,7 +18,7 @@
 
   <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/ignix-fix/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/ignix-fix/assets/styles-DCmRiWli.css">
+    <link rel="stylesheet" crossorigin href="/ignix-fix/assets/styles-DqT6znjv.css">
   </head>
   <body>
     <header class="header">
@@ -295,6 +295,92 @@
         </div>
     </div>
 </section>
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+
+            <div class="contact-info reveal-text">
+                <h2 class="section-title">Готовы <span class="text-accent">начать?</span></h2>
+                <p class="contact-desc">
+                    Заполните форму, и мы свяжемся с вами для бесплатной консультации.
+                    Узнайте, как наши технологии могут работать на вас.
+                </p>
+
+                <ul class="contact-list">
+                    <li>
+                        <div class="contact-icon"><i data-lucide="mail"></i></div>
+                        <div>
+                            <span>Email</span>
+                            <a href="mailto:support@ignix-fix.click">support@ignix-fix.click</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-icon"><i data-lucide="phone"></i></div>
+                        <div>
+                            <span>Телефон</span>
+                            <a href="tel:+493012345678">+49 30 123 456 78</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <span>Офис</span>
+                            <p>Friedrichstraße 43-45, 10117 Berlin</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form-wrapper reveal-card">
+                <form id="contactForm" class="contact-form">
+
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Иван Петров" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+33..." required>
+                        </div>
+                    </div>
+
+                    <div class="form-group captcha-group">
+                        <label for="captcha">Сколько будет <span id="math-question"></span>?</label>
+                        <input type="number" id="captcha" required placeholder="?" class="captcha-input">
+                        <span class="captcha-error" id="captchaError">Неверный ответ</span>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">
+                            Я согласен с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">
+                        <span class="btn-text">Отправить заявку</span>
+                        <span class="loader"></span>
+                    </button>
+                </form>
+
+                <div id="successMessage" class="success-message">
+                    <div class="success-icon"><i data-lucide="check-circle"></i></div>
+                    <h3>Заявка принята!</h3>
+                    <p>Наш менеджер свяжется с вами в ближайшее время.</p>
+                    <button class="btn btn--outline" id="resetFormBtn">Отправить еще</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     </main>
 
     <footer class="footer">
@@ -354,6 +440,13 @@
     </div>
   </div>
 </footer>
+    <div id="cookiePopup" class="cookie-popup">
+      <div class="cookie-content">
+        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="cookies.html">Cookie
+            политике</a>.</p>
+        <button id="acceptCookie" class="btn btn--primary btn--small">Принять</button>
+      </div>
+    </div>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://unpkg.com/split-type"></script>
