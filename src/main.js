@@ -205,3 +205,75 @@ animatedElements.forEach(el => {
     el.style.transition = "all 0.8s ease-out";
     observer.observe(el);
 });
+/* ========================
+   MATH CAPTCHA & FORM
+   ======================== */
+const form = document.getElementById('contactForm');
+const successMsg = document.getElementById('successMessage');
+const resetBtn = document.getElementById('resetFormBtn');
+const captchaQuestion = document.getElementById('math-question');
+const captchaInput = document.getElementById('captcha');
+const captchaError = document.getElementById('captchaError');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+let correctAnswer;
+
+// Generate Random Math Problem
+function generateCaptcha() {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    correctAnswer = num1 + num2;
+    captchaQuestion.textContent = `${num1} + ${num2}`;
+    captchaInput.value = '';
+    captchaError.style.display = 'none';
+}
+
+// Initial Generation
+generateCaptcha();
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Validate Captcha
+    if (parseInt(captchaInput.value) !== correctAnswer) {
+        captchaError.style.display = 'block';
+        captchaInput.focus();
+        return;
+    }
+
+    // Simulate AJAX Request
+    submitBtn.classList.add('loading');
+    
+    setTimeout(() => {
+        submitBtn.classList.remove('loading');
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        
+        // Reset form for next time
+        form.reset();
+    }, 1500);
+});
+
+resetBtn.addEventListener('click', () => {
+    successMsg.style.display = 'none';
+    form.style.display = 'block';
+    generateCaptcha(); // New math problem
+});
+
+/* ========================
+   COOKIE POPUP LOGIC
+   ======================== */
+const cookiePopup = document.getElementById('cookiePopup');
+const acceptBtn = document.getElementById('acceptCookie');
+
+// Check localStorage
+if (!localStorage.getItem('cookiesAccepted')) {
+    setTimeout(() => {
+        cookiePopup.classList.add('show');
+    }, 2000); // Show after 2 seconds
+}
+
+acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookiePopup.classList.remove('show');
+});
