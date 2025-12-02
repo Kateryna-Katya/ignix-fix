@@ -231,15 +231,36 @@ function generateCaptcha() {
 // Initial Generation
 generateCaptcha();
 
+// Ограничиваем ввод телефона только цифрами
+const phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', () => {
+    phoneInput.value = phoneInput.value.replace(/\D/g, ''); // Убираем всё кроме цифр
+});
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
+    let isValid = true;
+
     // Validate Captcha
     if (parseInt(captchaInput.value) !== correctAnswer) {
         captchaError.style.display = 'block';
         captchaInput.focus();
-        return;
+        isValid = false;
+    } else {
+        captchaError.style.display = 'none';
     }
+
+    // Validate phone
+    if (!/^\d{6,15}$/.test(phoneInput.value)) { // минимум 6 цифр, максимум 15
+        phoneInput.classList.add('error');
+        phoneInput.focus();
+        isValid = false;
+    } else {
+        phoneInput.classList.remove('error');
+    }
+
+    if (!isValid) return;
 
     // Simulate AJAX Request
     submitBtn.classList.add('loading');
@@ -251,14 +272,16 @@ form.addEventListener('submit', (e) => {
         
         // Reset form for next time
         form.reset();
+        generateCaptcha(); // Новый капча
     }, 1500);
 });
 
 resetBtn.addEventListener('click', () => {
     successMsg.style.display = 'none';
     form.style.display = 'block';
-    generateCaptcha(); // New math problem
+    generateCaptcha(); // Новый math problem
 });
+
 
 /* ========================
    COOKIE POPUP LOGIC
